@@ -408,3 +408,11 @@ function checkBinaryPathExists(binaryPathArray, selectedServerVersion) {
 
   return (serverSpecificPathExist | foundDefaultPath);
 }
+
+/* If a function, then evaluate */
+export function evalFunc(func, param) {
+  if(_.isFunction(func)) {
+    return func.apply(null, [param]);
+  }
+  return func;
+}
