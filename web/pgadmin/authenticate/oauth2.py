@@ -104,7 +104,7 @@ class OAuth2Authentication(BaseAuthentication):
                 access_token_url=oauth2_config['OAUTH2_TOKEN_URL'],
                 authorize_url=oauth2_config['OAUTH2_AUTHORIZATION_URL'],
                 api_base_url=oauth2_config['OAUTH2_API_BASE_URL'],
-                client_kwargs={'scope': 'email profile'}
+                client_kwargs={'scope': 'openid email profile'}
             )
 
     def get_source_name(self):
